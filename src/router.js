@@ -15,7 +15,7 @@ router.get("/done-tasks", getDoneTasks);
 // id is mongo object _id and toTask is todo or done
 router.get("/moveTask/:id/:toTask", moveTask);
 router.post("/createTask", createTask);
-router.delete("/:id", deleteDoneTask);
-router.delete("/:id", deleteTodoTask);
+router.delete("/:id/:toTask", deleteDoneTask);
+router.delete("/:id/:toTask", deleteTodoTask);
 
 module.exports = router;
