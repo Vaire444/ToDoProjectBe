@@ -9,7 +9,6 @@ module.exports = async function (req, res) {
 
       await Todo.create(task);
       await Done.deleteOne(task);
-      console.log("todo loomine ja done kustuamien");
     }
     if (req.params.toTask === "done") {
       const task = await Todo.findOne({ _id: req.params.id })
@@ -18,7 +17,6 @@ module.exports = async function (req, res) {
         .exec();
       await Done.create(task);
       await Todo.deleteOne(task);
-      console.log("done loomine ja todo kustutamine");
     }
     res.status(200).json({ message: "Success" });
   } catch (error) {
