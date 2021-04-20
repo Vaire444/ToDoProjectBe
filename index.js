@@ -15,6 +15,11 @@ app.get('/', (req, res) => {
 
 app.use('/api', router)
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`)
-})
+// app.listen(port, () => {
+//   console.log(`Server is running on http://localhost:${port}`)
+// }) vajalik HEROIKU HOSTIMISEKS TEEME UUE
+
+app.listen(process.env.PORT || port, () => {
+  console.log("Server is running")
+  
+ })
