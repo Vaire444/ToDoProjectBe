@@ -26,6 +26,5 @@ app.use('/api', router)
 // }) vajalik HEROIKU HOSTIMISEKS TEEME UUE
 
 app.listen(process.env.PORT || port, () => {
-  console.log("Server is running")
-  
+  console.log("Server is running")  
  })
