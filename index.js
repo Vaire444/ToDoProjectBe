@@ -13,17 +13,13 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
-});  //annab õigused mujalt aadressilt andmeid kasutada, saab ka npm-iga teha
+});
 
 app.get('/', (req, res) => {
   res.send('Hakkama said!')
 })
 
 app.use('/api', router)
-
-// app.listen(port, () => {
-//   console.log(`Server is running on http://localhost:${port}`)
-// }) vajalik HEROIKU HOSTIMISEKS TEEME UUE
 
 app.listen(process.env.PORT || port, () => {
   console.log("Server is running")
