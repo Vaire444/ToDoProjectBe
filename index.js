@@ -25,6 +25,6 @@ app.use('/api', router)
 //   console.log(`Server is running on http://localhost:${port}`)
 // }) vajalik HEROIKU HOSTIMISEKS TEEME UUE
 
-app.listen(process.env.PORT || port, () => {
+app.listen(process.env.port || port, () => {
   console.log("Server is running")  
  })
