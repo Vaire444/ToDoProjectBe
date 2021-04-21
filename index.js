@@ -21,6 +21,6 @@ app.get('/', (req, res) => {
 
 app.use('/api', router)
 
-app.listen(process.env.port || port, () => {
-  console.log("Server is running")  
+app.listen(process.env.PORT || port, () => {
+  console.log("Server is running")
  })
