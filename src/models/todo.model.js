@@ -15,6 +15,7 @@ const schema = new Schema({
         type: Number,
         enum: [1, 2, 3],
     },
+    userName: {type: String, required: true },
     date: { type: Date, required: true },
     createdDate: { type: Date, default: Date.now }
 })

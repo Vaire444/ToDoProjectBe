@@ -6,4 +6,6 @@ module.exports = {
   moveTask: require("./moveTask.controller"),
   deleteDoneTask: require("./deleteDoneTask.controller"),
   deleteTodoTask: require("./deleteTodoTask.controller"),
+  deleteTask: require("./deleteTask.controller"),
+  getTasksByName: require("./getTasksByName.controller"),
 };
