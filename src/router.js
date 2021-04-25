@@ -9,6 +9,8 @@ const {
   moveTask,
   deleteDoneTask,
   deleteTodoTask,
+  deleteTask,
+  getTasksByName,
 } = require("./controllers");
 
 router.get("/todo-tasks", getTodoTasks);
@@ -19,5 +21,7 @@ router.get("/moveTask/:id/:toTask", moveTask);
 router.post("/createTask", createTask);
 router.delete("/:id/:toTask", deleteDoneTask);
 router.delete("/:id/:toTask", deleteTodoTask);
+router.get("/deleteTask/:id/:toTask", deleteTask);
+router.get("/getTasksByName/:userName", getTasksByName);
 
 module.exports = router;
