@@ -5,15 +5,15 @@ const Done = db.Done;
 module.exports = async function (req, res) {
   try {
     if (req.params.toTask === "done") {
-      const task = await Done.findOne({ _id: req.params.id }).lean().exec();
-      await Done.deleteOne(task);
+      const donetask = await Done.findOne({ _id: req.body.id }).lean().exec();
+      await Done.deleteOne(donetask);
     }
     if (req.params.toTask === "todo") {
-      const task = await Todo.findOne({ _id: req.params.id })
+      const todoTask = await Todo.deleteOne({ _id: req.body.id })
         .limit(100)
         .lean()
         .exec();
-      await Todo.deleteOne(task);
+      await Todo.deleteOne(todoTask);
     }
     res.status(200).json({ message: "Success" });
   } catch (error) {
