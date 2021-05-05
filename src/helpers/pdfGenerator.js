@@ -1,5 +1,5 @@
 const { jsPDF } = require("jspdf");
-// require("jspdf-autotable");
+require("jspdf-autotable");
 
 module.exports = async function (result, res) {
   const doc = new jsPDF("p", "mm");
@@ -27,6 +27,7 @@ module.exports = async function (result, res) {
   }
 
   if (result.doneTasks.length > 0) {
+    doc.text("Done", startX, startY);
     startY += 5;
 
     doc.autoTable(header, result.doneTasks, {
