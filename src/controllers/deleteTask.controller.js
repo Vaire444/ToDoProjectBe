@@ -4,18 +4,18 @@ const Done = db.Done;
 
 module.exports = async function (req, res) {
   try {
-    if (req.params.toTask === "done") {
-      const donetask = await Done.findOne({ _id: req.body.id }).lean().exec();
-      await Done.deleteOne(donetask);
+    const toDoTask = await Done.findById({ _id: req.body._id }).lean().exec();
+    if (toDoTask !== null) {
+      await Done.deleteOne(toDoTask);
     }
-    if (req.params.toTask === "todo") {
-      const todoTask = await Todo.deleteOne({ _id: req.body.id })
-        .limit(100)
-        .lean()
-        .exec();
-      await Todo.deleteOne(todoTask);
+    const doneTask = await Todo.findById({ _id: req.body._id })
+      .limit(100)
+      .lean()
+      .exec();
+    if (doneTask !== null) {
+      await Todo.deleteOne(doneTask);
     }
-    res.status(200).json({ message: "Success" });
+    res.status(200).json({ message: "Success Delete" });
   } catch (error) {
     res.status(500).json({ message: error.message });
     console.log("error");
