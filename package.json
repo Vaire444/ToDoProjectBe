@@ -19,16 +19,17 @@
   },
   "homepage": "https://github.com/erlendprikss/expressmongoosedemo#readme",
   "dependencies": {
+    "excel4node": "^1.7.2",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jspdf": "^2.3.1",
     "jspdf-autotable": "^3.5.14",
+    "moment": "^2.29.1",
     "mongoose": "^5.12.5"
   },
   "devDependencies": {
-    "excel4node": "^1.7.2",
     "jest": "^26.6.3",
     "nodemon": "^2.0.6"
   }
