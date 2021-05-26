@@ -9,4 +9,5 @@ module.exports = {
   deleteTask: require("./deleteTask.controller"),
   getTasksByName: require("./getTasksByName.controller"),
   downloadFile: require("./downloadFile.controller"),
+  getAllDistinctUsers: require("./getAllDistinctUsers.controller"),
 };
