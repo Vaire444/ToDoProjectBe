@@ -12,6 +12,7 @@ const {
   deleteTask,
   getTasksByName,
   downloadFile,
+  getAllDistinctUsers,
 } = require("./controllers");
 
 router.get("/todo-tasks", getTodoTasks);
@@ -25,5 +26,6 @@ router.delete("/:id/:toTask", deleteTodoTask);
 router.delete("/deleteTask", deleteTask);
 router.get("/getTasksByName/:userName", getTasksByName);
 router.post("/downloadFile", downloadFile);
+router.get("/distinctUsers", getAllDistinctUsers);
 
 module.exports = router;
